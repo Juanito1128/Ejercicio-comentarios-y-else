@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de JavaScript</title>
+</head>
+<body>
+    <h1>Ejemplo de JavaScript</h1>
+    <script>
+        function verificarDiaSemana() {
+            let semana = prompt("¿Qué día de la semana es?");
+            if (semana.toLowerCase() === "sábado" || semana.toLowerCase() === "domingo") {
+                alert("¡Buen fin de semana!");
+            } else {
+                alert("¡Buena semana!");
+            }
+        }
+
+        function verificarNumero() {
+            let numero = Number(prompt("Ingresa un número: "));
+            if (isNaN(numero)) {
+                alert("Por favor ingresa un número válido.");
+            } else if (numero >= 0) {
+                alert("Positivo");
+            } else {
+                alert("Negativo");
+            }
+        }
+
+        function verificarPuntuacion() {
+            let puntuacion = Number(prompt("Ingresa la puntuación obtenida en el juego: "));
+            if (isNaN(puntuacion)) {
+                alert("Por favor ingresa un valor numérico para la puntuación.");
+            } else if (puntuacion >= 100) {
+                alert("¡Felicidades, has ganado!");
+            } else {
+                alert("Inténtalo nuevamente para ganar.");
+            }
+        }
+
+        function mostrarSaldo() {
+            let saldo = prompt("Ingresar el saldo disponible en tu cuenta: ");
+            if (isNaN(Number(saldo))) {
+                alert("Por favor ingresa un número válido para el saldo.");
+            } else {
+                alert(`El saldo disponible en tu cuenta es ${saldo}`);
+            }
+        }
+
+        function saludarUsuario() {
+            let nombre = prompt("Ingresa tu nombre: ");
+            if (nombre) {
+                alert(`Bienvenido, ${nombre}`);
+            } else {
+                alert("Por favor ingresa un nombre válido.");
+            }
+        }
+
+        verificarDiaSemana();
+        verificarNumero();
+        verificarPuntuacion();
+        mostrarSaldo();
+        saludarUsuario();
+    </script>
+</body>
+</html>
